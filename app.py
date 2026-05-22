@@ -15,11 +15,12 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 app = Flask(__name__)
 CORS(app)
 
-# 1. LISTA LOCAL DE PALAVRAS PROIBIDAS (Adicione ou remova conforme necessário)
+# 1. LISTA LOCAL DE PALAVRAS PROIBIDAS
 PALAVRAS_PROIBIDAS = [
     "veneno", "bomba", "droga", "tóxico", "pedra", "plastico", "vidro", 
     "metal", "arma", "faca", "sangue", "morrer", "morte", "suicidio",
-    "acido", "gasolina", "diesel", "detergente", "sabao", "bateria"
+    "acido", "gasolina", "diesel", "detergente", "sabao", "bateria",
+    "fezes", "urina", "tempo", "espaço", "momento"
 ]
 
 def generate_recipe(ingredientes):
